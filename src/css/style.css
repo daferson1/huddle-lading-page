@@ -1,0 +1,209 @@
+body {
+    display: grid;
+    grid-template-areas: "huddle huddle text-geral text-geral"
+        "image-illustration image-illustration text-geral text-geral"
+        "image-illustration image-illustration text-geral text-geral"
+        "image-illustration image-illustration footer footer"
+    ;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    background: url(../images/bg-desktop.svg) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.huddle {
+    grid-area: huddle;
+}
+
+.image-illustration {
+    grid-area: image-illustration;
+}
+
+.text {
+    grid-area: text-geral;
+}
+
+.footer {
+    grid-area: footer;
+
+}
+
+body .container .huddle {
+    display: flex;
+    margin: 50px 0px 50px 55px;
+    align-items: center;
+    color: #fff;
+}
+
+body .container .image-illustration {
+    margin: 80px 0px 0 55px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+body .navegation {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+body .navegation .text {
+    font-weight: 600;
+    font-family: "Open Sans", sans-serif;
+    color: #fff;
+}
+
+body .navegation .text h2 {
+    margin: 28vh 0 0 50px;
+    padding: 0 0 10px 0;
+    font-size: 4rem;
+}
+
+body .navegation .text h3 {
+    padding: 0 0 10px 50px;
+    font-size: 4rem;
+}
+
+body .navegation .text p {
+    padding: 0 70px 10px 50px;
+    font-size: 2rem;
+    font-weight: 400;
+    text-justify: auto;
+}
+
+body .navegation .text a {
+    border-radius: 25px;
+    background-color: #fff;
+    color: var(--Violet);
+    padding: 15px 50px;
+    position: relative;
+    top: 30px;
+    left: 50px;
+    font-size: 2rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+body .navegation .text a:hover {
+    background-color: var(--Soft-Magenta);
+
+}
+
+body .navegation .footer {
+
+    justify-content: flex-end;
+    display: flex;
+    margin-right: 70px;
+    font-size: 2.5rem;
+}
+
+body .navegation .footer a {
+    margin: 20px;
+    border: 3px solid #fff;
+    border-radius: 100%;
+    padding: 15px;
+    color: #fff;
+}
+
+body .navegation .footer .facebook {
+    padding: 15px 22px 15px 22px;
+}
+
+body .navegation .footer .twitter {
+    padding: 15px 17px 15px 17px;
+}
+
+body .navegation .footer .instagram {
+    padding: 15px 20px 15px 20px;
+}
+
+body .navegation .footer a:hover {
+    border-color: var(--Soft-Magenta);
+    color: var(--Soft-Magenta);
+}
+
+@media(max-width: 576px) {
+    body {
+        background: url(../images/bg-mobile.svg) center center no-repeat;
+        background-size: cover;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    body .container {
+        margin: 0px;
+        padding: 0px;
+
+    }
+
+    body header .huddle img {
+        color: black;
+        width: 130px;
+        height: 50px;
+        top: -30px;
+        left: -20px;
+        position: relative;
+    }
+
+    body .container .image-illustration {
+        display: flex;
+        width: 240px;
+        height: 240px;
+        margin: 20px;
+        padding: 0;
+        position: relative;
+        top: -30px;
+    }
+
+    body .navegation {
+        display: flex;
+        max-width: 375px;
+    }
+
+    body .navegation .text h2 {
+        margin: 0;
+        padding: 0;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    body .navegation .text h3 {
+        padding: 10px;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    body .navegation .text p {
+        padding: 0px;
+        font-size: 1rem;
+        text-align: center;
+        text-justify: auto;
+    }
+
+    body .navegation .text a {
+        color: var(--Violet);
+        padding: 7px 50px;
+        font-size: 1rem;
+        left: auto;
+        right: -120px;
+    }
+
+    body .navegation .footer {
+        justify-content: center;
+        display: flex;
+        margin: 80px 0;
+        font-size: 1.25rem;
+    }
+
+    body .navegation .footer a {
+        margin: 10px;
+        border: 1px solid #fff;
+        border-radius: 100%;
+        padding: 2px;
+        color: #fff;
+    }
+}
